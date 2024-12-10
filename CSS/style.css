@@ -1,0 +1,19 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/27/5d/2f/275d2f399e07c7a5d575e71d7fa0b443.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+    text-align: center;
+}
+
+div {
+    margin: 0 auto;
+}
+#game-board {
+    border-radius: 50px;
+    width: 600px;
+    height: 600px;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    
+}

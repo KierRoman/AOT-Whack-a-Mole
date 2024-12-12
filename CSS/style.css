@@ -1,36 +1,46 @@
 body {
     background-image: url(https://i.pinimg.com/originals/27/5d/2f/275d2f399e07c7a5d575e71d7fa0b443.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
 }
+
 h1 {
     color: white;
-    
+
+}
+
+#timer {
+    background-color: red;
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    font-size: xx-large;
 }
 
 #score {
     font-size: xx-large;
-  border-radius: 5px;
-  height: 30px;
-  width: 150px;
-  margin: 0 auto;
-  background-color: transparent;
-  padding: 5px ;
-  
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 15px;
+
 }
+
 #help {
     border-radius: 15px;
     width: 20px;
     height: 20px;
     background-color: darkred;
-    margin: 0 800px;
+    margin: 0 auto;
     text-align: center;
     padding: 5px;
     font-size: larger;
 }
 
-#game-board {
+#board {
     border-radius: 50px;
     width: 540px;
     height: 540px;
@@ -38,5 +48,17 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    
+}
+#board div {
+    width: 180;
+    height: 180;
+    background-image: url(../HoleInGround.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+#board div img {
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
 }

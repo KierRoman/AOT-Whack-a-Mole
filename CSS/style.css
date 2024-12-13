@@ -5,29 +5,68 @@ body {
     text-align: center;
 }
 
-h1 {
-    color: white;
+div {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+#start {
+    border-radius: 10px;
+    background-color: red;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    font-size: x-large;
+    
+    
 
 }
-
-#timer {
+/* #timer {
     background-color: red;
     width: 100px;
     height: 35px;
     margin: 0 auto;
     font-size: xx-large;
-}
+    justify-content: center;
+} */
 
 #score {
     font-size: xx-large;
-    border-radius: 5px;
-    height: 30px;
-    width: 150px;
     margin: 0 auto;
-    background-color: transparent;
+    /* background-color: transparent; */
     padding: 15px;
+}
+
+
+#board {
+    width: 540px;
+    height: 540px;
+    border-radius: 50px;
+    background-color: aquamarine;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+#board div {
+    width: 180px;
+    height: 180px;
+    background-image: url(../HoleInGround.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
 
 }
+
+#board div img {
+    width: 120px;
+    height: 120px;
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    /* margin: 0 auto; */
+}
+
 
 #help {
     border-radius: 15px;
@@ -35,30 +74,7 @@ h1 {
     height: 20px;
     background-color: darkred;
     margin: 0 auto;
-    text-align: center;
     padding: 5px;
     font-size: larger;
-}
-
-#board {
-    border-radius: 50px;
-    width: 540px;
-    height: 540px;
-    background-color: aquamarine;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
-#board div {
-    width: 180;
-    height: 180;
-    background-image: url(../HoleInGround.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-#board div img {
-    height: 100px;
-    width: 100px;
-    background-repeat: no-repeat;
+    justify-content: center;
 }

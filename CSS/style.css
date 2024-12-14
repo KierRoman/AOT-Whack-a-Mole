@@ -8,9 +8,10 @@ body {
 div {
     display: flex;
     flex-wrap: wrap;
-    
-    
+
+
 }
+
 #start {
     border-radius: 10px;
     background-color: red;
@@ -18,10 +19,11 @@ div {
     width: 100px;
     margin: 0 auto;
     font-size: x-large;
-    
-    
+
+
 
 }
+
 /* #timer {
     background-color: red;
     width: 100px;
@@ -34,7 +36,6 @@ div {
 #score {
     font-size: xx-large;
     margin: 0 auto;
-    /* background-color: transparent; */
     padding: 15px;
 }
 
@@ -52,19 +53,17 @@ div {
 #board div {
     width: 180px;
     height: 180px;
-    background-image: url(../HoleInGround.png);
+    background-image: url(../HoleInGroundd.png);
     background-repeat: no-repeat;
     background-size: contain;
-
+    filter: invert();
 
 }
 
 #board div img {
+    filter: invert();
     width: 120px;
     height: 120px;
-    /* background-size: contain; */
-    /* background-repeat: no-repeat; */
-    /* margin: 0 auto; */
 }
 
 
@@ -77,4 +76,10 @@ div {
     padding: 5px;
     font-size: larger;
     justify-content: center;
+}
+
+#help p {
+
+    font-size: large;
+    background-color: red;
 }

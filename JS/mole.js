@@ -12,10 +12,19 @@ startEl.addEventListener('click', () => {
     startEl.style.display = 'none';
     game();
 })
-// window.onload = function () {
-//     game();
-// console.log(startEl)
-// }
+help.addEventListener('mouseover', () => {
+    if (topEl.innerText == 'GAME OVER!') {
+        return;
+    }
+    let helpWdw = document.createElement('img');
+    helpWdw.src = 'Titan Rules.png';
+    helpWdw.alt = 'Rules of the game';
+    help.appendChild(helpWdw);
+
+    help.addEventListener('mouseout', () => {
+        helpWdw.style.display = 'none';
+    })
+})
 
 let game = () => {
     for (let i = 0; i < 9; i++) {
@@ -24,8 +33,8 @@ let game = () => {
         document.querySelector('#board').appendChild(hole);
     }
     // setInterval(timer, )
-    setInterval(popTitan, 1500);
-    setInterval(popScout, 2200);
+    setInterval(popTitan, 1000);
+    setInterval(popScout, 1750);
 }
 
 let randomHole = () => {
@@ -42,7 +51,8 @@ let popTitan = () => {
         thisTitan.innerHTML = '';
     }
     let titan = document.createElement('img');
-    titan.src = 'Uggo-Titan.png';
+    titan.src = 'Reiner.png';
+    titan.alt = 'The Armored Titan(AOT)';
 
     let num = randomHole();
 
@@ -53,6 +63,7 @@ let popTitan = () => {
     titan.addEventListener('click', () => {
         score += 10
         scoreEl.innerHTML = score
+        titan.style.display = 'none';
     })
     thisTitan.appendChild(titan);
 }
@@ -65,7 +76,8 @@ let popScout = () => {
         thisScout.innerHTML = '';
     }
     let scout = document.createElement('img');
-    scout.src = 'Mikasa.png';
+    scout.src = '25-257517_a-o-t-attack-on-titan-png.png';
+    scout.alt = 'Levi Ackerman(AOT)';
 
     let num = randomHole();
 
@@ -79,4 +91,4 @@ let popScout = () => {
     thisScout.appendChild(scout);
 
 }
-let helpMe = () => { }
+

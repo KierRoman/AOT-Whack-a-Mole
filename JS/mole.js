@@ -4,7 +4,6 @@ const topEl = document.querySelector('h1')
 const help = document.querySelector('#help');
 let startEl = document.querySelector('#start')
 let score = 0;
-// let time = 60;
 let thisTitan;
 let thisScout;
 
@@ -32,9 +31,16 @@ let game = () => {
         hole.id = i.toString();
         document.querySelector('#board').appendChild(hole);
     }
-    // setInterval(timer, )
     setInterval(popTitan, 1000);
     setInterval(popScout, 1750);
+    if (score >= 150){
+        setInterval(popTitan, 200);
+        setInterval(popScout, 200 );
+    }
+    if (score >= 250){
+        setInterval(popTitan, 100)
+        setInterval(popScout, 100)
+    }
 }
 
 let randomHole = () => {
@@ -92,3 +98,7 @@ let popScout = () => {
 
 }
 
+// <----------------------------------------CODE GRAVEYARD---------------------------------------->
+// Thoughts of a timer being added???    
+// let time = 60;
+// setInterval(timer, )

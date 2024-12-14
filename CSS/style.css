@@ -8,8 +8,6 @@ body {
 div {
     display: flex;
     flex-wrap: wrap;
-
-
 }
 
 #start {
@@ -19,26 +17,13 @@ div {
     width: 100px;
     margin: 0 auto;
     font-size: x-large;
-
-
-
 }
-
-/* #timer {
-    background-color: red;
-    width: 100px;
-    height: 35px;
-    margin: 0 auto;
-    font-size: xx-large;
-    justify-content: center;
-} */
 
 #score {
     font-size: xx-large;
     margin: 0 auto;
     padding: 15px;
 }
-
 
 #board {
     width: 540px;
@@ -49,7 +34,6 @@ div {
     align-items: center;
 }
 
-
 #board div {
     width: 180px;
     height: 180px;
@@ -57,7 +41,6 @@ div {
     background-repeat: no-repeat;
     background-size: contain;
     filter: invert();
-
 }
 
 #board div img {
@@ -79,7 +62,19 @@ div {
 }
 
 #help p {
-
     font-size: large;
     background-color: red;
 }
+
+
+
+
+/* <----------------------------------------CODEGRAVEYARD----------------------------------------> */
+/* #timer {
+        background-color: red;
+        width: 100px;
+        height: 35px;
+        margin: 0 auto;
+        font-size: xx-large;
+        justify-content: center;
+    } */

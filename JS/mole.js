@@ -8,12 +8,17 @@ let thisTitan;
 let thisScout;
 
 startEl.addEventListener('click', () => {
+    help.style.display = 'none';
     startEl.style.display = 'none';
     game();
+    runTime();
 })
 help.addEventListener('mouseover', () => {
-    if (topEl.innerText == 'GAME OVER!') {
+    if (topEl.innerText == 'GAME OVER!'|| startEl.style.display == 'none') {
         return;
+    }
+    if (startEl){
+        startEl.style.display = 'none';
     }
     let helpWdw = document.createElement('img');
     helpWdw.src = 'Titan Rules.png';
@@ -21,6 +26,9 @@ help.addEventListener('mouseover', () => {
     help.appendChild(helpWdw);
 
     help.addEventListener('mouseout', () => {
+        if (startEl.style.display = 'none'){
+            startEl.style.display = 'block';
+        }
         helpWdw.style.display = 'none';
     })
 })
@@ -99,6 +107,19 @@ let popScout = () => {
 }
 
 // <----------------------------------------CODE GRAVEYARD---------------------------------------->
-// Thoughts of a timer being added???    
-// let time = 60;
-// setInterval(timer, )
+// Thoughts of a timer being added???  
+// let runTime = () => {  
+// const clock = 2;
+// let time = clock * 60;
+// const ticToc = document.querySelector('#timer');
+// setInterval(watch, 1000);
+// function watch(){
+//     const minutes = Math.floor(time/60);
+//     let seconds = time % 60;
+
+//     seconds = seconds < 10 ? '0' + seconds : seconds;
+//     ticToc.innerHTML = `${minutes}:${seconds}`;
+//     time--;
+//     console.log(ticToc.innerHTML)
+// }
+// }

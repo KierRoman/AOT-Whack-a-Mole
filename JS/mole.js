@@ -14,10 +14,10 @@ startEl.addEventListener('click', () => {
     runTime();
 })
 help.addEventListener('mouseover', () => {
-    if (topEl.innerText == 'GAME OVER!'|| startEl.style.display == 'none') {
+    if (topEl.innerText == 'GAME OVER!' || startEl.style.display == 'none') {
         return;
     }
-    if (startEl){
+    if (startEl) {
         startEl.style.display = 'none';
     }
     let helpWdw = document.createElement('img');
@@ -26,7 +26,7 @@ help.addEventListener('mouseover', () => {
     help.appendChild(helpWdw);
 
     help.addEventListener('mouseout', () => {
-        if (startEl.style.display = 'none'){
+        if (startEl.style.display = 'none') {
             startEl.style.display = 'block';
         }
         helpWdw.style.display = 'none';
@@ -41,11 +41,11 @@ let game = () => {
     }
     setInterval(popTitan, 1000);
     setInterval(popScout, 1750);
-    if (score >= 150){
+    if (score >= 150) {
         setInterval(popTitan, 200);
-        setInterval(popScout, 200 );
+        setInterval(popScout, 200);
     }
-    if (score >= 250){
+    if (score >= 250) {
         setInterval(popTitan, 100)
         setInterval(popScout, 100)
     }
@@ -106,25 +106,25 @@ let popScout = () => {
 
 }
 
-let runTime = () => {  
+let runTime = () => {
     const clock = 2;
     let time = clock * 60;
-const ticToc = document.querySelector('#timer');
-let run = setInterval(watch, 1000);
-function watch(){
-    const minutes = Math.floor(time/60);
-    let seconds = time % 60;
+    const ticToc = document.querySelector('#timer');
+    let run = setInterval(watch, 1000);
+    function watch() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
 
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    ticToc.innerHTML = `${minutes}:${seconds}`;
-    time--;
-if (ticToc.innerHTML == '0:00'){
-    clearInterval(run);
-    topEl.innerHTML = 'GAME OVER!';
-} else if (topEl.innerHTML == 'GAME OVER!'){
-    ticToc.innerHTML = '0:00';
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        ticToc.innerHTML = `${minutes}:${seconds}`;
+        time--;
+        if (ticToc.innerHTML == '0:00') {
+            clearInterval(run);
+            topEl.innerHTML = 'GAME OVER!';
+        } else if (topEl.innerHTML == 'GAME OVER!') {
+            ticToc.innerHTML = '0:00';
+        }
+    }
 }
-}
-}
-    // <----------------------------------------CODE GRAVEYARD---------------------------------------->
-    // Thoughts of a timer being added???  
+// <----------------------------------------CODE GRAVEYARD---------------------------------------->
+// Thoughts of a timer being added???  

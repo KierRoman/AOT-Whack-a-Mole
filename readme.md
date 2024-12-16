@@ -15,8 +15,9 @@ Once the game starts this button will no longer be available, so make sure you h
 
 
 ## Game/Planning 
-    - [Play-Game]: https://kierroman.github.io/AOT-Whack-a-Mole/
-    - [Planning]: <https://trello.com/b/drbLL96e/kiers-board>
+Below I have provided a link to play the game as well as the planning tool I used to create it.
+    - Play-Game: https://kierroman.github.io/AOT-Whack-a-Mole/
+    - Planning: https://trello.com/b/drbLL96e/kiers-board
 
 
 ## Attribution:
@@ -35,6 +36,6 @@ Once the game starts this button will no longer be available, so make sure you h
 ## Next Steps: 
 In the future I would like to take time to touch up the overall design of the game and possibly make an interactive home page that greets the user before loading the game page.
 
-## Conatct
+## Contact
 
 Kier Roman -kierroman@gmail.com

@@ -11,15 +11,15 @@ Before you start you should toggle the help button (?). . .
 
 Once the game starts this button will no longer be available, so make sure you have a firm grasp of all the rules.
 
-    * To 'attack' a Titan you must click on them.
+* To 'attack' a Titan you must click on them.
 
-    * Each time you defeat a titan you will have 10 points added to your score.
+* Each time you defeat a titan you will have 10 points added to your score.
 
-    * If you attack a fellow scout then the game is over.
+* If you attack a fellow scout then the game is over.
 
-    * There is a 2:00 time limit for this game.
+* There is a 2:00 time limit for this game.
 
-    * See how many titans you can take down before it's all said and done!
+* See how many titans you can take down before it's all said and done!
 
 
 Game/Planning 

@@ -15,8 +15,8 @@ Once the game starts this button will no longer be available, so make sure you h
 
 
 ## Game/Planning 
-    - [Play-Game] [1]: <https://kierroman.github.io/AOT-Whack-a-Mole/>
-    - [Planning] [2]: <https://trello.com/b/drbLL96e/kiers-board>
+    - [Play-Game]: https://kierroman.github.io/AOT-Whack-a-Mole/
+    - [Planning]: <https://trello.com/b/drbLL96e/kiers-board>
 
 
 ## Attribution:

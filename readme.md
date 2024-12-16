@@ -1,18 +1,25 @@
 ![alt text](AOT-Whack-A-Mole.png)
-                                            ATTACK ON TITAN!!!
+# ATTACK ON TITAN!!!
 
-This isn't your typical Whack-A-Mole game...
+This isn't your typical Whack-A-Mole game... <br>
 Everyone has probably seen whack-a-mole but now the moles are titans. The goal is to whack(attack) as many titans as you can without attacking a fellow scout.
 
-<!-- - Link -->
-Before you start you should toggle the help button (?). . . Once the game starts this button will no longer be available, so make sure you have a firm grasp of all the rules.
+## Rules
+Before you start you should toggle the help button (?). . .  <br>
+Once the game starts this button will no longer be available, so make sure you have a firm grasp of all the rules.
+    - To 'attack' a Titan you must click on them.
+    - Each time you defeat a titan you will have 10 points added to your score.
+    - If you attack a fellow scout then the game is over.
+    - There is a 2:00 time limit for this game.
+    - See how many titans you can take down before it's all said and done!
 
-- Game/Planning 
-    - Play Game - 
-    - Planning - https://trello.com/b/drbLL96e/kiers-board
+
+## Game/Planning 
+    - [Play-Game] [1]: <https://kierroman.github.io/AOT-Whack-a-Mole/>
+    - [Planning] [2]: <https://trello.com/b/drbLL96e/kiers-board>
 
 
-- Attribution:
+## Attribution:
  Here are a few sources I used to help me create this game.
 
     - MDN WebDocs
@@ -20,10 +27,14 @@ Before you start you should toggle the help button (?). . . Once the game starts
     - BroCode (A Youtube Channel)
     - W3Schools
 
-- Technologies
+## Technologies
     - Javascript
     - CSS
     - HTML
 
-- Next Steps: 
-In the future I would like to take time to deploy a functional timer that counts down and ends the game when the timer runs out.
+## Next Steps: 
+In the future I would like to take time to touch up the overall design of the game and possibly make an interactive home page that greets the user before loading the game page.
+
+## Conatct
+
+Kier Roman -kierroman@gmail.com

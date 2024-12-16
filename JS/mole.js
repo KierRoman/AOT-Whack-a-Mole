@@ -106,20 +106,25 @@ let popScout = () => {
 
 }
 
-// <----------------------------------------CODE GRAVEYARD---------------------------------------->
-// Thoughts of a timer being added???  
-// let runTime = () => {  
-// const clock = 2;
-// let time = clock * 60;
-// const ticToc = document.querySelector('#timer');
-// setInterval(watch, 1000);
-// function watch(){
-//     const minutes = Math.floor(time/60);
-//     let seconds = time % 60;
+let runTime = () => {  
+    const clock = 2;
+    let time = clock * 60;
+const ticToc = document.querySelector('#timer');
+let run = setInterval(watch, 1000);
+function watch(){
+    const minutes = Math.floor(time/60);
+    let seconds = time % 60;
 
-//     seconds = seconds < 10 ? '0' + seconds : seconds;
-//     ticToc.innerHTML = `${minutes}:${seconds}`;
-//     time--;
-//     console.log(ticToc.innerHTML)
-// }
-// }
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    ticToc.innerHTML = `${minutes}:${seconds}`;
+    time--;
+if (ticToc.innerHTML == '0:00'){
+    clearInterval(run);
+    topEl.innerHTML = 'GAME OVER!';
+} else if (topEl.innerHTML == 'GAME OVER!'){
+    ticToc.innerHTML = '0:00';
+}
+}
+}
+    // <----------------------------------------CODE GRAVEYARD---------------------------------------->
+    // Thoughts of a timer being added???  

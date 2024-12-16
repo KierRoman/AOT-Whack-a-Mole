@@ -27,9 +27,9 @@ Game/Planning
 Below I have provided a link to play the game as well as the planning tool I used to create it.  
 
 
-[Play-Game:](https://kierroman.github.io/AOT-Whack-a-Mole/) 
+[Play-Game](https://kierroman.github.io/AOT-Whack-a-Mole/) 
 
-[Planning:](https://trello.com/b/drbLL96e/kiers-board)
+[Planning](https://trello.com/b/drbLL96e/kiers-board)
 
 
 ## Attribution:

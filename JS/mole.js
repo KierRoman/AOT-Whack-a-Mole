@@ -8,6 +8,8 @@ let thisTitan;
 let thisScout;
 
 startEl.addEventListener('click', () => {
+    document.getElementById('music').play();
+    document.getElementById('music').volume = .10;
     help.style.display = 'none';
     startEl.style.display = 'none';
     game();
@@ -20,6 +22,9 @@ help.addEventListener('mouseover', () => {
     if (startEl) {
         startEl.style.display = 'none';
     }
+    const erenRoar = new Audio('titan_eren_roar.mp3')
+    erenRoar.volume = .10;
+    erenRoar.play();
     let helpWdw = document.createElement('img');
     helpWdw.src = 'Titan Rules.png';
     helpWdw.alt = 'Rules of the game';
@@ -29,6 +34,7 @@ help.addEventListener('mouseover', () => {
         if (startEl.style.display = 'none') {
             startEl.style.display = 'block';
         }
+        erenRoar.volume = 0;
         helpWdw.style.display = 'none';
     })
 })
@@ -100,6 +106,10 @@ let popScout = () => {
     }
     thisScout = document.getElementById(num);
     scout.addEventListener('click', () => {
+        document.getElementById('music').volume = 0;
+        const sadMusic = new Audio('SadAOT.mp3')
+        sadMusic.volume = .10;
+        sadMusic.play()
         topEl.innerHTML = 'GAME OVER!'
     })
     thisScout.appendChild(scout);

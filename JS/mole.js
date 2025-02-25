@@ -106,10 +106,11 @@ let popScout = () => {
     }
     thisScout = document.getElementById(num);
     scout.addEventListener('click', () => {
-        document.getElementById('music').volume = 0;
         const sadMusic = new Audio('SadAOT.mp3')
         sadMusic.volume = .10;
+        sadMusic.loop = true;
         sadMusic.play()
+        document.getElementById('music').volume = 0;
         topEl.innerHTML = 'GAME OVER!'
     })
     thisScout.appendChild(scout);

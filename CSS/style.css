@@ -150,7 +150,7 @@ h1 {
   }
 
   #board div {
-    width: 70px;
+    width: 50vw;
     height: 70px;
     background-size: cover;
   }

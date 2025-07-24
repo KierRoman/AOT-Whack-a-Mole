@@ -62,7 +62,7 @@ h1 {
 #board div {
     width: 180px;
     height: 180px;
-    background-image: url(../static/HoleInGroundd.png);
+    background-image: url(../HoleInGroundd.png);
     background-repeat: no-repeat;
     background-size: contain;
 }

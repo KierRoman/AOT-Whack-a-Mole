@@ -32,14 +32,14 @@ help.addEventListener("mouseover", () => {
   }
 
   if (!erenRoar) {
-    erenRoar = new Audio("/static/titan_eren_roar.mp3");
+    erenRoar = new Audio("static/titan_eren_roar.mp3");
     erenRoar.volume = 0.1;
     erenRoar.play();
   }
 
   if (!helpWdw) {
     helpWdw = document.createElement("img");
-    helpWdw.src = "/static/Titan Rules.png";
+    helpWdw.src = "static/Titan Rules.png";
     helpWdw.alt = "Rules of the game";
     helpWdw.style.pointerEvents = "auto";
     helpWdw.style.display = "block";
@@ -128,7 +128,7 @@ let popTitan = () => {
     thisTitan.innerHTML = "";
   }
   let titan = document.createElement("img");
-  titan.src = "/static/Reiner.png";
+  titan.src = "static/Reiner.png";
   titan.alt = "The Armored Titan(AOT)";
 
   let num = randomHole();
@@ -153,7 +153,7 @@ let popScout = () => {
     thisScout.innerHTML = "";
   }
   let scout = document.createElement("img");
-  scout.src = "/static/25-257517_a-o-t-attack-on-titan-png.png";
+  scout.src = "static/25-257517_a-o-t-attack-on-titan-png.png";
   scout.alt = "Levi Ackerman(AOT)";
 
   let num = randomHole();
@@ -163,7 +163,7 @@ let popScout = () => {
   }
   thisScout = document.getElementById(num);
   scout.addEventListener("click", () => {
-    const sadMusic = new Audio("/static/SadAOT.mp3");
+    const sadMusic = new Audio("static/SadAOT.mp3");
     sadMusic.volume = 0.1;
     sadMusic.loop = true;
     sadMusic.play();
@@ -187,7 +187,7 @@ let runTime = () => {
       ticToc.style.display = "none";
       topEl.innerHTML = "GAME OVER!";
       resetEl.style.visibility = "visible";
-      const sadMusic = new Audio("/static/SadAOT.mp3");
+      const sadMusic = new Audio("static/SadAOT.mp3");
       sadMusic.volume = 0.1;
       sadMusic.loop = true;
       sadMusic.play();

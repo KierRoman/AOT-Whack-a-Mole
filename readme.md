@@ -1,4 +1,4 @@
-![alt text](/static/AOT-Whack-A-Mole.png)
+![alt text](AOT-Whack-A-Mole.png)
 # ATTACK ON TITAN!!!
 
 This isn't your typical Whack-A-Mole game... 

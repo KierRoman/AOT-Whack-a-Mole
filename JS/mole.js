@@ -3,10 +3,14 @@ const scoreEl = document.querySelector("#score");
 const topEl = document.querySelector("h1");
 const help = document.querySelector("#help");
 let startEl = document.querySelector("#start");
-let resetEl = document.querySelector('#reset');
+const ticToc = document.querySelector("#timer");
+let resetEl = document.querySelector("#reset");
 let score = 0;
 let thisTitan;
+let titanInterval, scoutInterval;
 let thisScout;
+const clock = 2;
+let time = clock * 60;
 let erenRoar;
 let helpWdw;
 let isHovering = false;
@@ -28,14 +32,14 @@ help.addEventListener("mouseover", () => {
   }
 
   if (!erenRoar) {
-    erenRoar = new Audio("titan_eren_roar.mp3");
+    erenRoar = new Audio("/static/titan_eren_roar.mp3");
     erenRoar.volume = 0.1;
     erenRoar.play();
   }
 
   if (!helpWdw) {
     helpWdw = document.createElement("img");
-    helpWdw.src = "Titan Rules.png";
+    helpWdw.src = "/static/Titan Rules.png";
     helpWdw.alt = "Rules of the game";
     helpWdw.style.pointerEvents = "auto";
     helpWdw.style.display = "block";
@@ -83,17 +87,31 @@ let game = () => {
   for (let i = 0; i < 9; i++) {
     let hole = document.createElement("div");
     hole.id = i.toString();
-    document.querySelector("#board").appendChild(hole);
+    board.appendChild(hole);
   }
-  setInterval(popTitan, 1000);
-  setInterval(popScout, 1750);
-  if (score >= 150) {
-    setInterval(popTitan, 200);
-    setInterval(popScout, 200);
-  }
-  if (score >= 250) {
-    setInterval(popTitan, 100);
-    setInterval(popScout, 100);
+
+  titanInterval = setInterval(popTitan, 1000);
+  scoutInterval = setInterval(popScout, 1750);
+
+  setInterval(checkDifficulty, 1000);
+};
+
+let checkDifficulty = () => {
+if (score >= 400 || time < 20) {
+    clearInterval(titanInterval);
+    clearInterval(scoutInterval);
+    titanInterval = setInterval(popTitan, 400);
+    scoutInterval = setInterval(popScout, 350);
+    } else if (score >= 250 || time < 60) {
+    clearInterval(titanInterval);
+    clearInterval(scoutInterval);
+    titanInterval = setInterval(popTitan, 500);
+    scoutInterval = setInterval(popScout, 400);
+} else if (score >= 150) {
+    clearInterval(titanInterval);
+    clearInterval(scoutInterval);
+    titanInterval = setInterval(popTitan, 550);
+    scoutInterval = setInterval(popScout, 650);
   }
 };
 
@@ -110,7 +128,7 @@ let popTitan = () => {
     thisTitan.innerHTML = "";
   }
   let titan = document.createElement("img");
-  titan.src = "Reiner.png";
+  titan.src = "/static/Reiner.png";
   titan.alt = "The Armored Titan(AOT)";
 
   let num = randomHole();
@@ -135,7 +153,7 @@ let popScout = () => {
     thisScout.innerHTML = "";
   }
   let scout = document.createElement("img");
-  scout.src = "25-257517_a-o-t-attack-on-titan-png.png";
+  scout.src = "/static/25-257517_a-o-t-attack-on-titan-png.png";
   scout.alt = "Levi Ackerman(AOT)";
 
   let num = randomHole();
@@ -145,7 +163,7 @@ let popScout = () => {
   }
   thisScout = document.getElementById(num);
   scout.addEventListener("click", () => {
-    const sadMusic = new Audio("SadAOT.mp3");
+    const sadMusic = new Audio("/static/SadAOT.mp3");
     sadMusic.volume = 0.1;
     sadMusic.loop = true;
     sadMusic.play();
@@ -156,9 +174,6 @@ let popScout = () => {
 };
 
 let runTime = () => {
-  const clock = 2;
-  let time = clock * 60;
-  const ticToc = document.querySelector("#timer");
   let run = setInterval(watch, 1000);
   function watch() {
     const minutes = Math.floor(time / 60);
@@ -169,10 +184,10 @@ let runTime = () => {
     time--;
     if (time < 0 || topEl.innerHTML === "GAME OVER!") {
       clearInterval(run);
-      ticToc.style.display = 'none';
+      ticToc.style.display = "none";
       topEl.innerHTML = "GAME OVER!";
-      resetEl.style.visibility = "visible"
-      const sadMusic = new Audio("SadAOT.mp3");
+      resetEl.style.visibility = "visible";
+      const sadMusic = new Audio("/static/SadAOT.mp3");
       sadMusic.volume = 0.1;
       sadMusic.loop = true;
       sadMusic.play();

@@ -62,7 +62,7 @@ h1 {
 #board div {
     width: 180px;
     height: 180px;
-    background-image: url(../HoleInGroundd.png);
+    background-image: url(../static/HoleInGroundd.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -133,5 +133,54 @@ h1 {
     background-color: red;
     box-shadow: 0 4px 8px rgb(19, 1, 1);
     
+}
+
+
+@media (max-width: 600px) {
+  body {
+    background-size: cover;
+    overflow: auto;
+  }
+
+  #board {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+  }
+
+  #board div {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+  }
+
+  #board div img {
+    width: 70px;
+    height: 70px;
+  }
+
+  #start, #reset {
+    width: 80px;
+    height: 40px;
+    font-size: medium;
+  }
+
+  #score {
+    font-size: x-large;
+  }
+
+  #timer {
+    font-size: x-large;
+    width: 60px;
+  }
+
+  #help img {
+    width: 90vw;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
 }
 /* <----------------------------------------CODEGRAVEYARD----------------------------------------> */

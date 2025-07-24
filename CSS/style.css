@@ -143,20 +143,20 @@ h1 {
   }
 
   #board {
-    width: 300px;
-    height: 300px;
+    width: 60vw;
+    height: 60vh;
     border-radius: 30px;
   }
 
   #board div {
-    width: 100px;
-    height: 100px;
+    width: 20vw;
+    height: 20vh;
     background-size: cover;
   }
 
   #board div img {
-    width: 70px;
-    height: 70px;
+    width: 20vw;
+    height: 20vh;
   }
 
   #start, #reset {

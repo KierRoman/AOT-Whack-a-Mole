@@ -190,9 +190,9 @@ h1 {
     z-index: 1;
   }
   #help {
-    height: 10px;
-    width: 10px;
-    font-size: x-small;
+    height: 15px;
+    width: 15px;
+    font-size: small;
     padding: 5px;
     margin: 0 auto;
     margin-bottom: 5px;

@@ -167,7 +167,9 @@ let popScout = () => {
     sadMusic.volume = 0.1;
     sadMusic.loop = true;
     sadMusic.play();
-    document.getElementById("music").volume = 0;
+    const bgMusic = document.getElementById("music");
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
     topEl.innerHTML = "GAME OVER!";
   });
   thisScout.appendChild(scout);

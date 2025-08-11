@@ -146,14 +146,14 @@ h1 {
 
   #board {
     margin: 0 auto;
-    width: 180px;
-    height: 180px;
+    width: 210px;
+    height: 210px;
     border-radius: 30px;
   }
 
   #board div {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background-size: cover;
   }
 
@@ -180,8 +180,9 @@ h1 {
   }
 
   #help img {
-    width: 180px;
-    height: 180px;
+    
+    width: 210px;
+    height: 210px;
     border-radius: 25px;
   }
   #help {

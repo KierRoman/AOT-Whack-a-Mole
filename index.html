@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Attack on Titan</title>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css" />
     <script defer src="./JS/mole.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <audio id="music">
-        <source src="14. Xl-Tt.mp3">
+      <source src="14. Xl-Tt.mp3" />
     </audio>
     <h1><strong>Attack on Titan!</strong></h1>
-    <h2 id='score'>0</h2>
-    <div id='help'>?</div>
-    <div id='board'>
-        <button id="start"><strong>Start!</strong></button>
+    <div class="scores">
+      <h2 id="highscores"></h2>
+      <h2 id="score">0</h2>
     </div>
-    <div id='timer'></div>
+    <div id="help">?</div>
+    <div id="board">
+      <button id="start"><strong>Start!</strong></button>
+    </div>
+    <div id="timer"></div>
     <div id="reset"><strong>RESET</strong></div>
-
-</body>
-
+    <div id="scoreInputModal" style="display: none">
+      <div class="scoreModal-header">
+        <h1>Your name will echo in the walls of history!</h1>
+        <h3>
+          Log your high score and stand among the brave — the Scouts who rose,
+          fought, and never faltered. This isn't just a number… it's proof that
+          you chose to fight.
+        </h3>
+        <h2>Shinzō wo Sasageyo!</h2>
+      </div>
+      <div class="scoreModal-form">
+        <input type="text" id="playerName" placeholder="Your name" />
+        <button id="submitScoreBtn">Submit Score</button>
+      </div>
+    </div>
+  </body>
 </html>
 
 <!-- <----------------------------------------CODEGRAVEYARD---------------------------------------->

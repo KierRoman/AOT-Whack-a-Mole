@@ -5,6 +5,7 @@ const help = document.querySelector("#help");
 let startEl = document.querySelector("#start");
 const ticToc = document.querySelector("#timer");
 let resetEl = document.querySelector("#reset");
+let highscoreEl = document.getElementById("highscores");
 let score = 0;
 let thisTitan;
 let titanInterval, scoutInterval;
@@ -20,6 +21,7 @@ startEl.addEventListener("click", () => {
   document.getElementById("music").volume = 0.1;
   help.style.display = "none";
   startEl.style.display = "none";
+  highscoreEl.style.display = "none";
   game();
   runTime();
 });
@@ -97,17 +99,17 @@ let game = () => {
 };
 
 let checkDifficulty = () => {
-if (score >= 400 || time < 20) {
+  if (score >= 400 || time < 20) {
     clearInterval(titanInterval);
     clearInterval(scoutInterval);
     titanInterval = setInterval(popTitan, 400);
     scoutInterval = setInterval(popScout, 350);
-    } else if (score >= 250 || time < 60) {
+  } else if (score >= 250 || time < 60) {
     clearInterval(titanInterval);
     clearInterval(scoutInterval);
     titanInterval = setInterval(popTitan, 500);
     scoutInterval = setInterval(popScout, 400);
-} else if (score >= 150) {
+  } else if (score >= 150) {
     clearInterval(titanInterval);
     clearInterval(scoutInterval);
     titanInterval = setInterval(popTitan, 550);
@@ -189,6 +191,20 @@ let runTime = () => {
       ticToc.style.display = "none";
       topEl.innerHTML = "GAME OVER!";
       resetEl.style.visibility = "visible";
+
+      const highScores = getHighScores();
+      const lowestHighScore = highScores[highscoreCount - 1]?.score ?? 0;
+
+      if (score > lowestHighScore || highScores.length < highscoreCount) {
+      const scoreModal = document.getElementById("scoreInputModal");
+      scoreModal.style.display = "flex";
+
+      document.getElementById("playerName").focus();
+      } else {
+        renderHighscores();
+        highscoreEl.style.display = "block";
+      }
+
       const sadMusic = new Audio("SadAOT.mp3");
       sadMusic.volume = 0.1;
       sadMusic.loop = true;
@@ -201,5 +217,68 @@ let runTime = () => {
 resetEl.addEventListener("click", () => {
   location.reload(); // Simple way to restart the game
 });
+
+// Lets log highscores...///
+
+const highscoreCount = 3;
+
+let getHighScores = () => {
+  const scores = localStorage.getItem("highscores");
+  return scores ? JSON.parse(scores) : [];
+};
+
+let saveHighScores = (scores) => {
+  localStorage.setItem("highscores", JSON.stringify(scores));
+};
+
+let submitScore = (name, score) => {
+  const newScore = { name, score };
+  const highScores = getHighScores();
+
+  if (score > 0) {
+
+    highScores.push(newScore);
+    highScores.sort((a, b) => b.score - a.score);
+    
+    const trimmedScores = highScores.slice(0, highscoreCount);
+    
+    saveHighScores(trimmedScores);
+    renderHighscores();
+  }
+};
+
+document.getElementById("submitScoreBtn").addEventListener("click", () => {
+  const nameInput = document.getElementById("playerName");
+  const name = nameInput.value.trim();
+
+  if (!name) {
+    alert("Please enter your name!")
+    return;
+  }
+
+  submitScore(name, score);
+
+  document.getElementById('scoreInputModal').style.display = "none";
+  nameInput.value = "";
+
+  document.getElementById("highscores").style.display = 'block';
+
+})
+
+
+let renderHighscores = () => {
+  const highScores = getHighScores();
+  const scoreboard = document.getElementById("highscores");
+  scoreboard.innerHTML = `
+  <h3>🏆 High Scores</h3>
+  <ol>
+  ${highScores.map((s) => `<li>${s.name}: ${s.score}</li>`).join("")}
+  </ol>
+  `;
+};
+renderHighscores();
+
+
+
 // <----------------------------------------CODE GRAVEYARD---------------------------------------->
 // Thoughts of a timer being added???

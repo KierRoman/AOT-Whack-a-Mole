@@ -78,7 +78,7 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url(/scouts.avif);
+  background-image: url(../scouts.avif);
   background-size: cover;
   background-position-x: center;
   background-repeat: no-repeat;

@@ -89,6 +89,17 @@ h1 {
   margin: 0 auto;
   height: 550px;
   width: 550px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#scoreInputModal::before {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  height: 600px;
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.621);
 }
 
 .scoreModal-header {
@@ -99,6 +110,7 @@ h1 {
   text-shadow: 3px 2px 3px rgb(6, 0, 0);
   line-height: 30px;
   width: 75%;
+  z-index: inherit;
 }
 
 .scoreModal-header h1 {
@@ -124,6 +136,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px 0;
   background-color: rgba(4, 250, 131, 0.247);
+  z-index: 2;
 }
 
 .scoreModal-form button {

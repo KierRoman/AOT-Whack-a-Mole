@@ -195,7 +195,7 @@ let runTime = () => {
       const highScores = getHighScores();
       const lowestHighScore = highScores[highscoreCount - 1]?.score ?? 0;
 
-      if (score > lowestHighScore || highScores.length < highscoreCount) {
+      if (score > 0 && (score > lowestHighScore || highScores.length < highscoreCount)) {
       const scoreModal = document.getElementById("scoreInputModal");
       scoreModal.style.display = "flex";
 
@@ -251,10 +251,10 @@ document.getElementById("submitScoreBtn").addEventListener("click", () => {
   const nameInput = document.getElementById("playerName");
   const name = nameInput.value.trim();
 
-  if (!name) {
-    alert("Please enter your name!")
-    return;
-  }
+  // if (!name) {
+  //   alert("Please enter your name!")
+  //   return;
+  // }
 
   submitScore(name, score);
 
@@ -264,6 +264,8 @@ document.getElementById("submitScoreBtn").addEventListener("click", () => {
   document.getElementById("highscores").style.display = 'block';
 
 })
+
+
 
 
 let renderHighscores = () => {
